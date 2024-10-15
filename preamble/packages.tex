@@ -25,6 +25,7 @@
 
 %%[1.4] Layout and Formatting %%
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry} % Set margins
+\usepackage{appendix}                       % Create the appendix environment
 \usepackage{hyperref}                       % Hyperlinks in the document
 \hypersetup{%
   colorlinks = true,
@@ -43,6 +44,30 @@
 %%[1.5] Tables and Code %%
 \usepackage{booktabs}                       % Enhances quality of tables
 \usepackage{listings}                       % Allows inclusion of code
+\lstdefinestyle{MathematicaStyle}{          % Define a style for Mathematica code
+    language=Mathematica,
+    basicstyle=\ttfamily\small,  % Small monospace font
+    backgroundcolor=\color{lightgray!10}, % Light background
+    frame=single,  % Add frame around code
+    keywordstyle=\color{blue}, % Mathematica keywords in blue
+    stringstyle=\color{teal},  % Strings in teal
+    commentstyle=\color{gray}, % Comments in gray
+    breaklines=true,  % Allow line breaks
+    showstringspaces=false  % Do not show spaces in strings
+}
+\lstdefinelanguage{Wolfram}{
+    morekeywords={Plot, Sin, Cos, Integrate, Table, Module, If, Do, While, ListPlot, Manipulate}, % Add more keywords as needed
+    keywordstyle=\color{blue},
+    morestring=[b]",
+    stringstyle=\color{teal},
+    comment=[l]{(*},
+    commentstyle=\color{gray}\ttfamily,
+    basicstyle=\ttfamily\small,  % Monospaced font
+    backgroundcolor=\color{lightgray!10},  % Light background color
+    frame=single,  % Frame around the code block
+    breaklines=true,  % Allow line breaks in long lines
+    showstringspaces=false,  % Do not show spaces in strings
+}
 
 %%[1.6] Custom Environments %%
 \usepackage[outline]{contour}               % For text outlining
