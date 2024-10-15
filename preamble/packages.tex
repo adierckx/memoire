@@ -1,7 +1,53 @@
-% Contains all \usepackage commands
-% Packages for math, graphics, etc.
-\usepackage{amsmath, amssymb}
-\usepackage{graphicx}
-\usepackage{hyperref}      % Clickable references
-\usepackage{geometry}      % Adjust margins
-\geometry{a4paper, margin=2.5cm}
+%%%%[1]PACKAGES%%%%
+
+%%[1.1] Language and Encoding %%
+\usepackage[english]{babel}                 % English language support
+\usepackage[T1]{fontenc}                    % Output font encoding for accented characters
+\usepackage[utf8]{inputenc}                 % Input encoding for Unicode characters
+
+%%[1.2] Mathematics %%
+\usepackage{amsmath}                        % American Mathematical Society math package
+\usepackage{amsthm}                         % Theorem environments
+\usepackage{amssymb}                        % Additional math symbols
+\usepackage{physics}                        % Additional physics symbols
+\usepackage{dsfont}                         % For \mathds{1}
+\usepackage{tensor}                         % Correct placement of indices, use \Gamma\indices{_a^b}
+\numberwithin{equation}{section}            % Resets equation numbering each section
+
+%%[1.3] Graphics and Colors %%
+\usepackage{graphicx}                       % Required for inserting images
+\usepackage[dvipsnames]{xcolor}             % More predefined colors
+\usepackage{tikz}                           % For drawings and diagrams
+\usepackage{tkz-euclide}                    % For Euclidean geometry drawings
+\usetikzlibrary{intersections,angles,quotes}% TikZ libraries
+\usepackage[compat=1.1.0]{tikz-feynman}     % Feynman diagrams
+\tikzfeynmanset{warn luatex=false}
+
+%%[1.4] Layout and Formatting %%
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry} % Set margins
+\usepackage{hyperref}                       % Hyperlinks in the document
+\hypersetup{%
+  colorlinks = true,
+  linkcolor  = OliveGreen,
+  urlcolor   = Plum
+}
+\usepackage{float}                          % Allows [H] option to force figure placement
+\usepackage{cleveref}                       % Smart referencing
+\crefname{table}{table}{tables}
+\Crefname{table}{Table}{Tables}
+\crefname{figure}{figure}{figures}
+\Crefname{figure}{Figure}{Figures}
+\crefname{equation}{eq.}{equations}
+\Crefname{equation}{Eq.}{Equations}
+
+%%[1.5] Tables and Code %%
+\usepackage{booktabs}                       % Enhances quality of tables
+\usepackage{listings}                       % Allows inclusion of code
+
+%%[1.6] Custom Environments %%
+\usepackage[outline]{contour}               % For text outlining
+\contourlength{1.3pt}
+\usepackage[strict]{changepage}             % For adjustwidth environment
+\usepackage{framed}                         % For framed environments
+\usepackage{comment}                        % Allows commenting out large sections
+\usepackage{dirtytalk}                      % For quotations

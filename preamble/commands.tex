@@ -1,5 +1,255 @@
-% Contains all \usepackage commands
-% Custom commands for convenience
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\diff}{\mathrm{d}}
+%%%%[2]CUSTOM COMMANDS AND ENVIRONMENTS%%%%
+
+%%[2.1] Custom Theorem Styles %%
+\makeatletter                                       % Allows the use of "@" in command names
+\def\th@plain{%
+  \thm@notefont{}                                   % same as heading font
+  \itshape                                          % Body font
+}
+\def\th@definition{%
+  \thm@notefont{}                                   % same as heading font
+  \normalfont                                       % Body font
+}
+\makeatother
+
+%%[2.2] Theorem Environments %%
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{regle}{Rule}[section]
+
+\theoremstyle{remark}
+\newtheorem{notation}[definition]{Notation}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{plain} % Default
+\newtheorem{prop}{Property}[section]
+\newtheorem{thm}[prop]{Theorem}
+\newtheorem{exo}{Exercise}[section]
+\newtheorem{sol}{Solution}[section]
+\newtheorem{ind}[sol]{Hint}
+\newtheorem{question}[sol]{Question}
+\renewenvironment{proof}{{\bfseries Proof.}}{}
+
+%%[2.3] Custom Colors %%
+\definecolor{gris}{RGB}{110,110,110}
+\definecolor{noir}{RGB}{0,0,0}
+\newtheoremstyle{style_exemple}{}{}{\color{gris}}{}{\color{noir}\bfseries}{}{ }{}
+\theoremstyle{style_exemple}
+\newtheorem*{exemple}{Example:}
+
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{defshade}{RGB}{230, 243, 226}          % For definitions, rules, and notations
+\definecolor{thmshade}{RGB}{236, 221, 253}          % For theorems and propositions
+\definecolor{solshade}{RGB}{255, 243, 230}          % For solutions and hints
+
+%%[2.4] Custom Framed Environments %%
+% Frame for citations
+\newenvironment{formal}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{teal}\vrule width 2pt}%
+    {\color{formalshade}\vrule width 4pt}%
+    \colorbox{formalshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% Frame for definitions
+\newenvironment{formal_def}{%
+  \def\FrameCommand{%
+    \hspace{0pt}%
+    {\color{OliveGreen}\vrule width 2pt}%
+    {\color{defshade}\vrule width 4pt}%
+    \colorbox{defshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% Frame for rules
+\newenvironment{formal_regle}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{PineGreen}\vrule width 2pt}%
+    {\color{defshade}\vrule width 4pt}%
+    \colorbox{defshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% Frame for notations
+\newenvironment{formal_not}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{LimeGreen}\vrule width 2pt}%
+    {\color{defshade}\vrule width 4pt}%
+    \colorbox{defshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% Frame for theorems
+\newenvironment{formal_thm}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{violet}\vrule width 2pt}%
+    {\color{thmshade}\vrule width 4pt}%
+    \colorbox{thmshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% Frame for propositions
+\newenvironment{formal_prop}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{Thistle}\vrule width 2pt}%
+    {\color{thmshade}\vrule width 4pt}%
+    \colorbox{thmshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% Frame for solutions
+\newenvironment{formal_sol}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{BurntOrange}\vrule width 2pt}%
+    {\color{solshade}\vrule width 4pt}%
+    \colorbox{solshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+% Frame for hints
+\newenvironment{formal_ind}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{Dandelion}\vrule width 2pt}%
+    {\color{solshade}\vrule width 4pt}%
+    \colorbox{solshade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}%
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}%
+}{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+%%[2.5] Shortcuts for Using the Frames %%
+% \coldef, definition
+\newcommand{\coldef}[1]{\begin{formal_def}
+    \begin{definition}
+        #1
+    \end{definition}
+\end{formal_def}}
+
+% \colcit, citation
+\newcommand{\colcit}[1]{\begin{formal}
+    \begin{definition}
+        #1
+    \end{definition}
+\end{formal}}
+
+% \q, question
+\newcommand{\q}[1]{\begin{formal_def} 
+    \begin{question}
+        #1
+    \end{question}
+\end{formal_def}}
+
+% \colregle, rule
+\newcommand{\colregle}[1]{\begin{formal_regle}
+    \begin{regle}
+        #1
+    \end{regle}
+\end{formal_regle}}
+
+% \colnot, notation
+\newcommand{\colnot}[1]{\begin{formal_not}
+    \begin{notation}
+        #1
+    \end{notation}
+\end{formal_not}}
+
+% \colthm, theorem
+\newcommand{\colthm}[1]{\begin{formal_thm}
+    \begin{thm}
+        #1
+    \end{thm}
+\end{formal_thm}}
+
+% \colprop, proposition
+\newcommand{\colprop}[1]{\begin{formal_prop}
+    \begin{prop}
+        #1
+    \end{prop}
+\end{formal_prop}}
+
+% \colsol, solution
+\newcommand{\colsol}[1]{\begin{formal_sol}
+    \begin{sol}
+        #1
+    \end{sol}
+\end{formal_sol}}
+
+% \colind, hint
+\newcommand{\colind}[1]{\begin{formal_ind}
+    \begin{ind}
+        #1
+    \end{ind}
+\end{formal_ind}}
+
+% \colq, question
+\newcommand{\colq}[1]{\begin{formal_ind}
+    \begin{question}
+        #1
+    \end{question}
+\end{formal_ind}}
+
+%%[2.6] Other Custom Commands %%
+\newcommand{\g}[1]{\foreignlanguage{french}{\og #1 \fg}} % French quotation marks
+\newcommand{\R}{\mathbb{R}}                         % Real numbers
+\newcommand{\Q}{\mathbb{Q}}                         % Rational numbers
+\newcommand{\Z}{\mathbb{Z}}                         % Integers
+\newcommand{\N}{\mathbb{N}}                         % Natural numbers
+\newcommand{\eqdef}{\, \widehat{=} \, }
+\newcommand{\notiff}{                               % Not if and only if
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{"}$\hidewidth\cr$\iff$}}}}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\dom}[1]{\mathfrak{D}_{#1}}             % Domain of a function
