@@ -1,8 +1,71 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{pdg}
-R.~L. Workman and Others.
-\newblock {Review of Particle Physics}.
-\newblock {\em PTEP}, 2022:083C01, 2022.
+\bibitem[Bagui et~al.(2023)Bagui, Clesse, Luca, Ezquiaga, Franciolini,
+  García-Bellido, Joana, Jain, Kuroyanagi, Musco, Papanikolaou, Raccanelli,
+  Renaux-Petel, Riotto, Morales, Scalisi, Sergijenko, Unal, Vennin, and
+  Wands]{bagui2023}
+Eleni Bagui, Sebastien Clesse, Valerio~De Luca, Jose~María Ezquiaga, Gabriele
+  Franciolini, Juan García-Bellido, Cristian Joana, Rajeev~Kumar Jain, Sachiko
+  Kuroyanagi, Ilia Musco, Theodoros Papanikolaou, Alvise Raccanelli, Sébastien
+  Renaux-Petel, Antonio Riotto, Ester~Ruiz Morales, Marco Scalisi, Olga
+  Sergijenko, Caner Unal, Vincent Vennin, and David Wands.
+\newblock Primordial black holes and their gravitational-wave signatures, 2023.
+\newblock URL \url{https://arxiv.org/abs/2310.19857}.
+
+\bibitem[Baumann(2011)]{Baumann:2009ds}
+Daniel Baumann.
+\newblock {Inflation}.
+\newblock In \emph{{Theoretical Advanced Study Institute in Elementary Particle
+  Physics}: {Physics of the Large and the Small}}, pages 523--686, 2011.
+\newblock \doi{10.1142/9789814327183_0010}.
+
+\bibitem[Baumann(2022)]{Baumann:2022}
+Daniel Baumann.
+\newblock \emph{{Cosmology}}.
+\newblock Cambridge University Press, 7 2022.
+\newblock ISBN 978-1-108-93709-2, 978-1-108-83807-8.
+\newblock \doi{10.1017/9781108937092}.
+
+\bibitem[Carr et~al.(2024)Carr, Clesse, García-Bellido, Hawkins, and
+  Kühnel]{Carr_2024}
+B.J. Carr, S.~Clesse, J.~García-Bellido, M.R.S. Hawkins, and F.~Kühnel.
+\newblock Observational evidence for primordial black holes: A positivist
+  perspective.
+\newblock \emph{Physics Reports}, 1054:\penalty0 1–68, February 2024.
+\newblock ISSN 0370-1573.
+\newblock \doi{10.1016/j.physrep.2023.11.005}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.physrep.2023.11.005}.
+
+\bibitem[Chrusciel(2023)]{Chrusciel:2020fql}
+Piotr Chrusciel.
+\newblock \emph{{Geometry of Black Holes}}.
+\newblock International Series of Monographs on Physics. Oxford University
+  Press, 4 2023.
+\newblock ISBN 978-0-19-887320-4, 978-0-19-885541-5.
+
+\bibitem[Peter and Uzan(2013)]{Peter:2013avv}
+Patrick Peter and Jean-Philippe Uzan.
+\newblock \emph{{Primordial Cosmology}}.
+\newblock Oxford Graduate Texts. Oxford University Press, 2 2013.
+\newblock ISBN 978-0-19-966515-0, 978-0-19-920991-0.
+
+\bibitem[Rovelli and Vidotto(2014)]{Rovelli:2014ssa}
+Carlo Rovelli and Francesca Vidotto.
+\newblock \emph{{Covariant Loop Quantum Gravity}: {An Elementary Introduction
+  to Quantum Gravity and Spinfoam Theory}}.
+\newblock Cambridge Monographs on Mathematical Physics. Cambridge University
+  Press, 11 2014.
+\newblock ISBN 978-1-107-06962-6, 978-1-316-14729-0.
+
+\bibitem[Rovelli and Vidotto(2024)]{Rovelli:2024sjl}
+Carlo Rovelli and Francesca Vidotto.
+\newblock {Planck stars, White Holes, Remnants and Planck-mass quasi-particles.
+  The quantum gravity phase in black holes' evolution and its manifestations}.
+\newblock 7 2024.
 
 \end{thebibliography}

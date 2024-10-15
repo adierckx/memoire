@@ -29,10 +29,13 @@
 \usepackage{hyperref}                       % Hyperlinks in the document
 \hypersetup{%
   colorlinks = true,
-  linkcolor  = OliveGreen,
+  linkcolor  = OliveGreen!50!Black,
+  citecolor = OliveGreen!80!Black,
   urlcolor   = Plum
 }
 \usepackage{float}                          % Allows [H] option to force figure placement
+\usepackage{natbib}             % Load natbib with author-year citation style
+\setcitestyle{authoryear,open={[},close={]}} %Citation-related commands
 \usepackage{cleveref}                       % Smart referencing
 \crefname{table}{table}{tables}
 \Crefname{table}{Table}{Tables}
